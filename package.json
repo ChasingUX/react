@@ -1,0 +1,28 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "this is a react test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jesse Chase",
+  "license": "ISC",
+  "dependencies": {
+    "react-router": "^0.13.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesseDO/react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jesseDO/react/issues"
+  },
+  "homepage": "https://github.com/jesseDO/react#readme",
+  "devDependencies": {
+    "babel-core": "^5.6.18",
+    "babel-loader": "^5.3.1",
+    "node-libs-browser": "^0.5.2",
+    "webpack": "^1.10.1"
+  }
+}
