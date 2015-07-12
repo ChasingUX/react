@@ -1,2 +1,2 @@
-# react
-test react stuff, ok?
+# GitHub-React
+Lets test the github API using react.js
