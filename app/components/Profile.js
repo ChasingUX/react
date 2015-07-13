@@ -3,16 +3,28 @@ var Router = require('react-router');
 var Repos = require('./GitHub/Repos');
 var UserName = require('./GitHub/UserProfile');
 var Notes = require('./Notes/Notes');
+var ReactFireMixin = require('reactfire');
+var FireBase = require('firebase');
 
 var Profile = React.createClass({
 	//takes components state, and adds properties to it - allows us to query the router parametere and get specific user that we need
-	mixins: [Router.State],
+	mixins: [Router.State, ReactFireMixin],
 	getInitialState: function(){
 		return {
-			notes: ['note1', 'note2'],
+			notes: [],
 			bio: {name: 'Jesse'},
 			repos: ['libscore','react-github']
 		}
+	},
+	// called when the component mounts to the view
+	componentDidMount: function(){
+		this.ref = new FireBase('https://github-note-taker.firebaseio.com/');
+		var childRef = this.ref.child(this.getParams().username);
+		this.bindAsArray(childRef, 'notes');
+	},
+	//when we unmount (switch usernames) we want to stop looking for state changes on that component
+	componentWillUnmount: function(){
+		this.unbind('notes');
 	},
 	render: function(){
 		var username = this.getParams().username;
