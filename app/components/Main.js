@@ -5,7 +5,10 @@ var Main = React.createClass({
   render: function(){
     return (
       <div>
-        <div className="wrapper">
+      	<header>
+      		This is a persistent Header
+      	</header>
+      	<div className="wrapper">
           <RouteHandler />
         </div>
       </div>

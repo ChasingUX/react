@@ -23584,6 +23584,11 @@
 	      'div',
 	      null,
 	      React.createElement(
+	        'header',
+	        null,
+	        'This is a persistent Header'
+	      ),
+	      React.createElement(
 	        'div',
 	        { className: 'wrapper' },
 	        React.createElement(RouteHandler, null)

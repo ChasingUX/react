@@ -22,3 +22,8 @@ section {
 section span {
 	margin-right: 6px;
 }
+
+header {
+	padding: 20px;
+	background-color: #f2f2f2;
+}
